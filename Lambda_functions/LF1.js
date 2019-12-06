@@ -183,7 +183,7 @@ function validateSlot(cuisine, location, date, time, people, email) {
             email : email }),
           // MessageDeduplicationId: "TheWhistler",  // Required for FIFO queues
           // MessageId: "Group1",  // Required for FIFO queues
-          QueueUrl: "https://sqs.us-east-1.amazonaws.com/397577651207/DiningQueue"
+          QueueUrl: "<queueurl>"
         };
         
         sqs.sendMessage(params, function(err, data) {

@@ -177,8 +177,8 @@ function send(text) {
 	});*/
 	
 	var apigClient = apigClientFactory.newClient({
-		  accessKey: 'AKIAIOWVLFF3J2LH4AXA',
-		  secretKey: 'w9V9s5IAFRxkZ1u1Vo8M5zphoSBaTVDBzl2s2aO4',
+		  accessKey: 'access_key',
+		  secretKey: 'your_secret_key',
 		});
 
 	var body = {

@@ -3,7 +3,7 @@ exports.handler = async (event) => {
     //var phoneNumberFormat = require('google-libphonenumber').PhoneNumberFormat;
     var message = "";
     var restaurantSuggestion = "";
-    var sqsQueueUrl = "https://sqs.us-east-1.amazonaws.com/397577651207/DiningQueue";
+    var sqsQueueUrl = "<queueurl>";
     var AWS = require('aws-sdk');
     AWS.config.update({region: 'us-east-1'});
     var sqs = new AWS.SQS();
@@ -35,7 +35,7 @@ exports.handler = async (event) => {
     .then((data) =>{
         return new Promise((resolve, reject) => {
             const https = require('https');
-            let url = "https://search-yelp-6onvimkqqomnb3ltpvfq44kjp4.us-east-1.es.amazonaws.com/restaurants/_search?q=cuisine:'"+message.cuisine+"'";
+            let url = "https://search-yelp-151214856dsas1fsafas1.us-east-1.es.amazonaws.com/restaurants/_search?q=cuisine:'"+message.cuisine+"'";
             https.get(url, (res) => {
                 res.setEncoding('utf8');
                 let rawData = '';
